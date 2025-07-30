@@ -1,0 +1,20 @@
+
+import toxi.physics2d.*;
+import toxi.physics2d.behaviors.*;
+import toxi.physics2d.constraints.*;
+import toxi.physics3d.*;
+import toxi.physics3d.behaviors.*;
+import toxi.physics3d.constraints.*;
+
+ArrayList<Particle> particles;
+ArrayList<Spring> springs;
+
+void setup() {
+  size(600, 400);
+  particles = new ArrayList<Particle>();
+  springs = new ArrayList<Spring>();
+}
+
+void draw() {
+  background(50);
+}

@@ -1,0 +1,37 @@
+import toxi.physics3d.*;
+import toxi.physics3d.behaviors.*;
+import toxi.physics3d.constraints.*;
+import toxi.physics2d.*;
+import toxi.physics2d.behaviors.*;
+import toxi.physics2d.constraints.*;
+import toxi.geom.*;
+
+ArrayList<Particle> particles;
+// ArrayList<Spring> springs;
+
+float w = 10;
+float rows = 40;
+float cols = 40;
+
+void setup() {
+  size(600, 400);
+  particles = new ArrayList<Particle>();
+  // springs = new ArrayList<Spring>();
+
+  float x = 100;
+  float y = 10;
+  for(int i = 0; i < rows; i++){
+    for(int j = 0; j< rows; j++){
+      Particle p = new Particle(x,y);
+      x = x + 10;
+    }
+    y = y + 10;
+  }
+}
+
+void draw() {
+  background(50);
+  for(Particle p: particles){
+    p.display();
+  }
+}
